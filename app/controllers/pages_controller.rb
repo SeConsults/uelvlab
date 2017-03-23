@@ -3,7 +3,10 @@ class PagesController < ApplicationController
     
   end
   
-  def lab
+  def about
     
+  end
+  
+  def project
   end
 end
