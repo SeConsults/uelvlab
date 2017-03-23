@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   
   root 'pages#home'
   get 'lab', to: 'pages#lab'
+  get 'tutorial', to: 'pages#tutorial'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
