@@ -17,17 +17,17 @@ $navbar-default-bg: black;
   text-decoration: none;
 }
 .center{
-  text-align: center;
+  text-align: right;
 }
 
 .jumbotron{
-  background-image: asset-url('2.png');
+  background-image: asset-url('7.png');
   background-size: cover;
-  height: 380px;
+  height: 400px;
 }
 
 .jumbotron h1{
-  color: #08088A;
+  color: #fff;
   text-align: center;
   margin-bottom: 30px;
   letter-spacing: -1px;
