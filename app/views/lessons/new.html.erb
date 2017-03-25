@@ -1,5 +1,14 @@
 <h1>Create lesson</h1>
 
+
+ <% if @lesson.errors.any? %>
+ <ul>
+  <% @lesson.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+ <% end %>
+ </ul>
+<% end %>
+
 <%= form_for @lesson do |f| %>
 
 <p>
@@ -12,6 +21,5 @@
 </p>
 <p>
   <%= f.submit %>
-</p>
-
+ </p>
 <% end %>

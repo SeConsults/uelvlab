@@ -5,18 +5,24 @@ class LessonsController < ApplicationController
     @lesson = Lesson.new
     
   end
+ 
   def create
     
-    #render plain: params[:lesson].inspect
     @lesson = Lesson.new(lesson_params)
-    @lesson.save
-    redirect_to lesson_show(@lesson)
-  
+    if @lesson.save
+      flash[:notice] = "Lesson created"
+      redirect_to lesson_path(@lesson)
+    else
+      render 'new'
+    end
   end
-  
+    def show
+      
+      @lesson = Lesson.find(params[:id])
+      
+    end
   private 
    def lesson_params
-     
      params.require(:lesson).permit(:title, :description)
    end
   
