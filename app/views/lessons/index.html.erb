@@ -25,8 +25,11 @@
         <%= link_to "Edit", edit_lesson_path(lesson) %> |
       </td>
       <td>
-        <%= link_to "show", lesson_path(lesson) %>
+        <%= link_to "show", lesson_path(lesson) %> |
       </td>
+    </td>
+    <td>
+      <%= link_to "Delete", lesson_path(lesson), method: :delete, data:{confirm:"Delete this lesson?"} %> 
     </td>
   </tr>
   <% end %>
