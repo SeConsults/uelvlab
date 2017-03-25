@@ -1,7 +1,6 @@
-<h1>Create lesson</h1>
+<h2>Edit lesson</h2>
 
-
- <% if @lesson.errors.any? %>
+<% if @lesson.errors.any? %>
  <ul>
   <% @lesson.errors.full_messages.each do |msg| %>
   <li><%= msg %></li>

@@ -1,0 +1,33 @@
+<h2>Lessons</h2>
+
+<p>
+  <%= link_to "Create new lesson", new_lesson_path %>
+</p>
+
+<table>
+  <tr>
+    <th>
+      Title
+    </th>
+    <th>
+      Description
+    </th>
+  </tr>
+  
+  <% @lessons.each do |lesson| %>
+  <tr>
+    <td>
+      <%= lesson.title %>
+      <td>
+        <%= lesson.description %>
+      </td>
+      <td>
+        <%= link_to "Edit", edit_lesson_path(lesson) %> |
+      </td>
+      <td>
+        <%= link_to "show", lesson_path(lesson) %>
+      </td>
+    </td>
+  </tr>
+  <% end %>
+</table>
