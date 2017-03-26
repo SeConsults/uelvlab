@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   get 'project', to: 'pages#project'
   get 'about', to: 'pages#about'
 
-resources :lessons
+resources :activitylogs
+resources :labs
+resources :lectures
+resources :tasks
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,5 +1,3 @@
 class Task < ActiveRecord::Base
-  
-  validate :module, presence: true
-  
+  validates :labNo, presence: true
 end

@@ -1,0 +1,36 @@
+<h2>Lectures</h2>
+
+<p>
+  <%= link_to "Create new lecture", new_lecture_path %>
+</p>
+
+<table>
+  <tr>
+    <th>
+      Title
+    </th>
+    <th>
+      Description
+    </th>
+  </tr>
+  
+  <% @lectures.each do |lecture| %>
+  <tr>
+    <td>
+      <%= lecture.title %>
+      <td>
+        <%= lecture.description %>
+      </td>
+      <td>
+        <%= link_to "Edit", edit_lecture_path(lecture) %> |
+      </td>
+      <td>
+        <%= link_to "show", lecture_path(lecture) %> |
+      </td>
+    </td>
+    <td>
+      <%= link_to "Delete", lecture_path(lecture), method: :delete, data:{confirm:"Delete this lecture?"} %> 
+    </td>
+  </tr>
+  <% end %>
+</table>

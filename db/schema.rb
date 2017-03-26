@@ -11,32 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170324154059) do
+ActiveRecord::Schema.define(version: 20170325225431) do
 
-  create_table "lessons", force: :cascade do |t|
+  create_table "activitylogs", force: :cascade do |t|
+    t.string "logNunmber"
+  end
+
+  create_table "labs", force: :cascade do |t|
+    t.string   "sessionNo"
+    t.string   "labNo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "lectures", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.text     "author"
-  end
-
-  create_table "logs", force: :cascade do |t|
-    t.string "studentnumber"
-  end
-
-  create_table "students", force: :cascade do |t|
+    t.text     "lecturer"
+    t.datetime "create_at"
+    t.datetime "updated_at"
   end
 
   create_table "tasks", force: :cascade do |t|
-    t.string "module"
+    t.string "labNo"
     t.text   "title"
-    t.string "description"
-    t.time   "created_at"
-    t.time   "updated_at"
-  end
-
-  create_table "videos", force: :cascade do |t|
+    t.string "details"
   end
 
 end
