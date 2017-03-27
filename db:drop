@@ -1,0 +1,20 @@
+-- create_table("activitylogs", {:force=>:cascade})
+   -> 0.0149s
+-- create_table("labs", {:force=>:cascade})
+   -> 0.0079s
+-- create_table("lectures", {:force=>:cascade})
+   -> 0.0089s
+-- create_table("tasks", {:force=>:cascade})
+   -> 0.0103s
+-- initialize_schema_migrations_table()
+   -> 0.0409s
+-- create_table("activitylogs", {:force=>:cascade})
+   -> 0.0112s
+-- create_table("labs", {:force=>:cascade})
+   -> 0.0078s
+-- create_table("lectures", {:force=>:cascade})
+   -> 0.0089s
+-- create_table("tasks", {:force=>:cascade})
+   -> 0.0113s
+-- initialize_schema_migrations_table()
+   -> 0.0204s

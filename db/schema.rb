@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170325225431) do
-
-  create_table "activitylogs", force: :cascade do |t|
-    t.string "logNunmber"
-  end
+ActiveRecord::Schema.define(version: 20170327133800) do
 
   create_table "labs", force: :cascade do |t|
     t.string   "sessionNo"
@@ -30,12 +26,6 @@ ActiveRecord::Schema.define(version: 20170325225431) do
     t.text     "lecturer"
     t.datetime "create_at"
     t.datetime "updated_at"
-  end
-
-  create_table "tasks", force: :cascade do |t|
-    t.string "labNo"
-    t.text   "title"
-    t.string "details"
   end
 
 end

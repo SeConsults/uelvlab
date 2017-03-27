@@ -14,22 +14,34 @@
     </th>
   </tr>
   
-  <% @lessons.each do |lesson| %>
+  <% @activitylogs.each do |lesson| %>
   <tr>
     <td>
-      <%= lesson.title %>
+      <%= activitylog.logNumber %>
       <td>
-        <%= lesson.description %>
+        <%= activitylog.s_ip %>
       </td>
       <td>
-        <%= link_to "Edit", edit_lesson_path(lesson) %> |
+        <%= activitylog.d_ip %>
+        <td>
+          <%= activitylog.operating_system %>
+        </td>
+        <td>
+          <%= activitylog.port_no %>
+        </td>
+        <td>
+          <%= activitylog.tool %>
+        </td>
       </td>
       <td>
-        <%= link_to "show", lesson_path(lesson) %> |
+        <%= link_to "Edit", edit_activitylog_path(activitylog) %> |
+      </td>
+      <td>
+        <%= link_to "show", activitylog_path(activitylog) %> |
       </td>
     </td>
     <td>
-      <%= link_to "Delete", lesson_path(lesson), method: :delete, data:{confirm:"Delete this lesson?"} %> 
+      <%= link_to "Delete", activitylog_path(activitylog), method: :delete, data:{confirm:"Delete this log?"} %> 
     </td>
   </tr>
   <% end %>
