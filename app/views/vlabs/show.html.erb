@@ -1,0 +1,12 @@
+<h2>Virtual Pen-Testing Lab</h2>
+<p>
+ Title: <%= @vlab.title %>
+</p>
+
+<p>
+  Instruction: <%= @vlab.instruction %>
+</p>
+
+<%= link_to "Edit this lab", edit_vlab_path(@vlab) %> |
+
+<%= link_to "Back to lab", vlabs_path %>

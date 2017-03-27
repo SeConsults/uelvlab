@@ -1,0 +1,40 @@
+<h2>Virtual Laboratory</h2>
+
+<p>
+  <%= link_to "Create new lab", new_vlab_path %>
+</p>
+<table>
+  <tr>
+    <th>
+      Title
+    </th>
+    <th>
+      Instruction
+    </th>
+    <th>
+      Logfile
+    </th>
+  </tr>
+  <% @vlabs.each do |vlab| %>
+  <tr>
+    <td>
+       <%= vlab.title %>
+       <td>
+         <%= vlab.instruction %>
+         <td>
+           <%= vlab.logfile %>
+         </td>
+       </td>
+       <td>
+         <%= link_to "Edit", edit_vlab_path(vlab) %> |
+       </td>
+       <td>
+         <%= link_to "show", vlab_path(vlab) %> |
+       </td>
+    </td>
+    <td>
+      <%= link_to "Delete", vlab_path(vlab), method: :delete, data:{confirm:"Delete this lab?"} %>
+    </td>
+  </tr>
+  <% end %>
+</table>
